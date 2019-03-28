@@ -58,25 +58,25 @@ interface NotyCallbackOptions {
 }
 
 interface NotyStatic {
-    (notyOptions: NotyOptions);
+    (notyOptions: NotyOptions): void;
     defaults: NotyOptions;
 
-    get(id: any);
-    close(id: any);
-    clearQueue();
-    closeAll();
-    setText(id: any, text: string);
-    setType(id: any, type: string);
+    get(id: any): void;
+    close(id: any): void;
+    clearQueue(): void;
+    closeAll(): void;
+    setText(id: any, text: string): void;
+    setType(id: any, type: string): void;
 }
 
 interface Noty {
     (notyOptions: NotyOptions);
 
-    show();
-    close();
-    setText(text: string);
-    setType(type: string);
-    setTimeout(timeout: number);
+    show(): void;
+    close(): void;
+    setText(text: string): void;
+    setType(type: string): void;
+    setTimeout(timeout: number): void;
 
     closed: boolean;
     shown: boolean;
